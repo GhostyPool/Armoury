@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{2f3a0d8e-ce98-4ab5-903a-283589eda117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugin">
+      <UniqueIdentifier>{f659503e-b83f-429e-b27f-52e7cfb8f31b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minhook">
+      <UniqueIdentifier>{aa2109a1-9d05-48d3-885b-705265a95caf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minhook\include">
+      <UniqueIdentifier>{9ff0495e-0711-42bd-9f54-fc1fe494d54d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minhook\src">
+      <UniqueIdentifier>{e617060b-8a3d-4c94-bb86-84cba68372b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="minhook\src\hde">
+      <UniqueIdentifier>{b97aec52-1200-4a9f-8062-9a070d4924be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unreal">
+      <UniqueIdentifier>{74e4255c-dfcd-4efe-ad6a-facdcd54ab22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="armoury">
+      <UniqueIdentifier>{8fed2a2d-131f-4505-9abd-c101e59413a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\modutils">
+      <UniqueIdentifier>{486759db-203a-4cc5-b1e0-4b21482b17ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="utils\addr.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\log.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\PatternSolver.cpp">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\Settings.cpp">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\buffer.c">
+      <Filter>minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\hook.c">
+      <Filter>minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\trampoline.c">
+      <Filter>minhook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\hde\hde32.c">
+      <Filter>minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\src\hde\hde64.c">
+      <Filter>minhook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="unreal\FName.cpp">
+      <Filter>unreal</Filter>
+    </ClCompile>
+    <ClCompile Include="unreal\FString.cpp">
+      <Filter>unreal</Filter>
+    </ClCompile>
+    <ClCompile Include="armoury\Armoury.cpp">
+      <Filter>armoury</Filter>
+    </ClCompile>
+    <ClCompile Include="armoury\OfflineInventory.cpp">
+      <Filter>armoury</Filter>
+    </ClCompile>
+    <ClCompile Include="armoury\UpdateCachedAssetData.cpp">
+      <Filter>armoury</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\modutils\Patterns.cpp">
+      <Filter>utils\modutils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\IniReader.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="utils\addr.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\utils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\log.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\PatternSolver.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\Settings.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\buffer.h">
+      <Filter>minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\trampoline.h">
+      <Filter>minhook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\hde32.h">
+      <Filter>minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\hde64.h">
+      <Filter>minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\pstdint.h">
+      <Filter>minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\table32.h">
+      <Filter>minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\table64.h">
+      <Filter>minhook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\include\MinHook.h">
+      <Filter>minhook\include</Filter>
+    </ClInclude>
+    <ClInclude Include="unreal\FName.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="unreal\FString.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="unreal\TArray.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="unreal\UObject.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="core.h" />
+    <ClInclude Include="unreal\FSoftObjectPath.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="armoury\Armoury.h">
+      <Filter>armoury</Filter>
+    </ClInclude>
+    <ClInclude Include="unreal\FPrimaryAssetId.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\modutils\MemoryMgr.h">
+      <Filter>utils\modutils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\modutils\Patterns.h">
+      <Filter>utils\modutils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\modutils\Trampoline.h">
+      <Filter>utils\modutils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\IniReader.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="unreal\FAssetBundleEntry.h">
+      <Filter>unreal</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
