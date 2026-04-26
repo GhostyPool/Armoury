@@ -33,7 +33,7 @@ extern "C" __declspec(dllexport) void InitializeASI()
     Memory::VP::Patch<uint8_t>(_pattern(PATID_UAssetManager_UpdateCachedAssetData), 0xE8);
     Memory::VP::Patch<uint8_t>(_pattern(PATID_UAssetManager_UpdateCachedAssetData) + 5, 0x90);
 
-    Armoury::LoadArmours(SettingsMgr.wszArmourFolder);
+    Armoury::LoadArmours();
 }
 
 static bool ValidateGameVersion()

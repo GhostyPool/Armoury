@@ -9,11 +9,9 @@ eSettingsManager::eSettingsManager()
 	if (ini.HasInited())
 	{
 		bEnableConsoleWindow = ini.ReadBoolean("Misc", "EnableConsoleWindow", false);
-		swprintf(wszArmourFolder, _countof(wszArmourFolder), ini.ReadWideString(L"General", L"ArmourFolder", L"Armours"));
 	}
 	else
 	{
 		bEnableConsoleWindow = false;
-		wcscpy(wszArmourFolder, L"Armours");
 	}
 }

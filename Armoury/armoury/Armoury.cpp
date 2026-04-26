@@ -108,7 +108,7 @@ bool Armoury::AddArmourEntry(const std::string& charName, const wchar_t* armourS
 	return true;
 }
 
-void Armoury::LoadArmours(const wchar_t* folderName)
+void Armoury::LoadArmours()
 {
 	wchar_t moduleName[MAX_PATH] = {};
 	DWORD nSize = GetModuleFileNameW(nullptr, moduleName, MAX_PATH);

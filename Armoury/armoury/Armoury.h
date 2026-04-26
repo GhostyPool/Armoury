@@ -13,7 +13,7 @@ struct ArmourEntry
 struct Armoury
 {
 public:
-	static void LoadArmours(const wchar_t* folderName);
+	static void LoadArmours();
 private:
 	static bool AddArmourEntry(const std::string& charName, const wchar_t* armourSection, const wchar_t* filePath);
 	static std::unordered_map<std::string, std::vector<ArmourEntry>> characterItems;
