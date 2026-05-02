@@ -80,6 +80,9 @@
     <ClCompile Include="utils\IniReader.cpp">
       <Filter>utils</Filter>
     </ClCompile>
+    <ClCompile Include="armoury\ProcessRequest.cpp">
+      <Filter>armoury</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -25,4 +25,8 @@ public:
 
 	static void* OfflineInvFirstCheck_Hook(void*);
 	static inline void* (*oOfflineInvFirstCheck)(void*) = nullptr;
+
+	static bool ProcessRequest_IsDomainAllowed_Hook(void*, const wchar_t**);
+	static inline bool (*oProcessRequest_IsDomainAllowed)(void*, const wchar_t**) = nullptr;
+
 };

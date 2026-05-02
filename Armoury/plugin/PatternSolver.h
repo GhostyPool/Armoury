@@ -15,6 +15,8 @@ enum EPatternID {
 
 	PATID_UAssetManager_UpdateCachedAssetData,
 
+	PATID_FCurlHttpRequest_ProcessRequest_IsDomainAllowed,
+
 	PATID_Total_Patterns
 };
 

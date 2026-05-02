@@ -5,7 +5,7 @@
 #pragma warning(disable:4996)
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 
-static void DisplayPathError() { eLog::Message(ELogLevel::Error, "Unable to initialize IniReader! This program does not support paths over 260 characters!"); }
+#define DisplayPathError() { eLog::Message(ELogLevel::Error, "Unable to initialize IniReader! This program does not support paths over 260 characters!"); }
 
 CIniReader::CIniReader(const char* szFileName)
 {

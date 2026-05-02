@@ -38,6 +38,8 @@ void PatternSolver::Initialize()
 
     ms_patterns[PATID_UAssetManager_UpdateCachedAssetData] = GetPattern("FF 90 ? ? ? ? E9 ? ? ? ? 48 C7 44 24 ? 00 00 00 00", 0);
 
+    ms_patterns[PATID_FCurlHttpRequest_ProcessRequest_IsDomainAllowed] = GetPattern("E8 ? ? ? ? 84 C0 0F 84 ? ? ? ? 48 8B 05 ? ? ? ? 48 85 C0 75", 0);
+
     auto end = std::chrono::high_resolution_clock::now();
 
     auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);

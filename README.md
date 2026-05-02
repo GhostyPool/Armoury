@@ -20,6 +20,7 @@ If you are looking to integrate your own skins, please head to the wiki.
 - [ermaccer](https://github.com/ermaccer): portions of the code including the CIniReader, PatternSolver and others, used with explicit permission from the author.
 - [ModUtils](https://github.com/CookiePLMonster/ModUtils) by [CookiePLMonster](https://github.com/CookiePLMonster).
 - [MinHook](https://github.com/TsudaKageyu/minhook).
+- [Ultimate-ASI-Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) by [ThirteenAG](https://github.com/ThirteenAG).
 
 ## License
 This project is licensed under the PolyForm Noncommercial License 1.0.0.
