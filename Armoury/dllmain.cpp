@@ -32,12 +32,15 @@ extern "C" __declspec(dllexport) void InitializeASI()
     MH_CreateHook((void*)_pattern(PATID_OfflineInvFirstCheck), &Armoury::OfflineInvFirstCheck_Hook, (void**)&Armoury::oOfflineInvFirstCheck);
     MH_EnableHook((void*)_pattern(PATID_OfflineInvFirstCheck));
 
+    MH_CreateHook((void*)_pattern(PATID_GetIsKrossplayEnabled), &Armoury::GetIsKrossplayEnabled_Hook, (void**)&Armoury::GetIsKrossplayEnabled);
+    MH_EnableHook((void*)_pattern(PATID_GetIsKrossplayEnabled));
+
+    Memory::VP::Patch<uint8_t>(_pattern(PATID_ShouldDisplayKrossplayToggleOnlineSettings), 0xEB);
+    Memory::VP::Patch<uint8_t>(_pattern(PATID_ShouldDisplayKrossplayToggleMainMenu), 0xEB);
+
     Memory::VP::InjectHook(_pattern(PATID_UAssetManager_UpdateCachedAssetData), tramp->Jump(Armoury::UAssetManager_UpdateCachedAssetData_Hook));
     Memory::VP::Patch<uint8_t>(_pattern(PATID_UAssetManager_UpdateCachedAssetData), 0xE8);
     Memory::VP::Patch<uint8_t>(_pattern(PATID_UAssetManager_UpdateCachedAssetData) + 5, 0x90);
-
-    Memory::VP::ReadCall(_pattern(PATID_FCurlHttpRequest_ProcessRequest_IsDomainAllowed), Armoury::oProcessRequest_IsDomainAllowed);
-    Memory::VP::InjectHook(_pattern(PATID_FCurlHttpRequest_ProcessRequest_IsDomainAllowed), tramp->Jump(Armoury::ProcessRequest_IsDomainAllowed_Hook));
 
     Armoury::LoadArmours();
 }
@@ -46,10 +49,11 @@ static bool ConfirmationToRun()
 {
     int result = MessageBoxW(nullptr,
         L"Armoury is a game modification that enables custom items to be used, such as skins and gear.\n\n"
-        L"In order to achieve this, the game will be launched in a semi-offline state, which disables and affects certain online features, such as:\n"
-        L"Online casual, koth and ranked play, online inventory synchronization, online message receival, online reward receival, and other online features.\n"
-        L"Private matches and Towers of Time/Invasions remain playable.\n\n"
-        L"Online features will become fully available once you launch the game without Armoury.\n\n"
+        L"In order to achieve this, the game will be launched in a modified state. Unfortunately, these changes cause incompatibilities with console players.\n"
+        L"To maintain a stable online environment while using Armoury, the following online features have been disabled: "
+        L"Krossplay.\n\n"
+        L"Other online features, such as online inventory synchronization, online message receival, online reward receival, and possibly others, may also not function properly.\n\n"
+        L"Krossplay and other affected online features will become available once you launch the game without Armoury.\n\n"
         L"Launch with Armoury enabled?\n"
         L"(This dialog may be disabled from Armoury.ini)\n",
         L"Armoury",

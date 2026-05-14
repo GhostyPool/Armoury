@@ -38,7 +38,9 @@ void PatternSolver::Initialize()
 
     ms_patterns[PATID_UAssetManager_UpdateCachedAssetData] = GetPattern("FF 90 ? ? ? ? E9 ? ? ? ? 48 C7 44 24 ? 00 00 00 00", 0);
 
-    ms_patterns[PATID_FCurlHttpRequest_ProcessRequest_IsDomainAllowed] = GetPattern("E8 ? ? ? ? 84 C0 0F 84 ? ? ? ? 48 8B 05 ? ? ? ? 48 85 C0 75", 0);
+    ms_patterns[PATID_GetIsKrossplayEnabled] = GetPattern("0F B6 81 ? ? ? ? C3 ? ? ? ? ? ? ? ? 48 83 EC ? ? ? ? 45 33 C0", 0);
+    ms_patterns[PATID_ShouldDisplayKrossplayToggleOnlineSettings] = GetPattern("74 ? BA ? ? ? ? 48 8D 05 ? ? ? ? 89 54 24 ? EB ? 48 8D 05 ? ? ? ? C7 44 24 ? ? ? ? ? 48 89 44 24 ? 8D 43 ? 41 3B 46 ? 41 89 46 ? 7E ? 8B D3 49 8B CE E8 ? ? ? ? 45 33 C0", 0);
+    ms_patterns[PATID_ShouldDisplayKrossplayToggleMainMenu] = GetPattern("74 ? BA ? ? ? ? 48 8D 05 ? ? ? ? 89 54 24 ? EB ? 48 8D 05 ? ? ? ? C7 44 24 ? ? ? ? ? 48 89 44 24 ? 8D 43 ? 41 3B 46 ? 41 89 46 ? 7E ? 8B D3 49 8B CE E8 ? ? ? ? ? ? ? 48 8B CB", 0);
 
     auto end = std::chrono::high_resolution_clock::now();
 
@@ -82,7 +84,10 @@ const char* PatternSolver::GetPatternName(int id)
         "FMemory_Free",
         "OfflineInvFirstCheck",
         "CVarSetter_Int",
-        "UAssetManager_UpdateCachedAssetData"
+        "UAssetManager_UpdateCachedAssetData",
+        "GetIsKrossplayEnabled",
+        "ShouldDisplayKrossplayToggleOnlineSettings",
+        "PATID_ShouldDisplayKrossplayToggleMainMenu"
     };   
 
     return szPatternNames[id];

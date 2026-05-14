@@ -80,7 +80,7 @@
     <ClCompile Include="utils\IniReader.cpp">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="armoury\ProcessRequest.cpp">
+    <ClCompile Include="armoury\Krossplay.cpp">
       <Filter>armoury</Filter>
     </ClCompile>
   </ItemGroup>

@@ -19,14 +19,13 @@ private:
 	static std::unordered_map<std::string, std::vector<ArmourEntry>> characterItems;
 
 public:
-	// hooks
 	static void UAssetManager_UpdateCachedAssetData_Hook(void*, void*, uintptr_t, bool);
 	static inline void (*oUAssetManager_UpdateCachedAssetData)(uintptr_t, void*, uintptr_t, bool) = nullptr;
 
 	static void* OfflineInvFirstCheck_Hook(void*);
 	static inline void* (*oOfflineInvFirstCheck)(void*) = nullptr;
 
-	static bool ProcessRequest_IsDomainAllowed_Hook(void*, const wchar_t**);
-	static inline bool (*oProcessRequest_IsDomainAllowed)(void*, const wchar_t**) = nullptr;
+	static bool GetIsKrossplayEnabled_Hook(void*);
+	static inline bool (*GetIsKrossplayEnabled)(void*) = nullptr;
 
 };

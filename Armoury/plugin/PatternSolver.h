@@ -15,7 +15,9 @@ enum EPatternID {
 
 	PATID_UAssetManager_UpdateCachedAssetData,
 
-	PATID_FCurlHttpRequest_ProcessRequest_IsDomainAllowed,
+	PATID_GetIsKrossplayEnabled,
+	PATID_ShouldDisplayKrossplayToggleOnlineSettings,
+	PATID_ShouldDisplayKrossplayToggleMainMenu,
 
 	PATID_Total_Patterns
 };

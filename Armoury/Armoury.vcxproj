@@ -179,11 +179,11 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="armoury\OfflineInventory.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
+    <ClCompile Include="armoury\Krossplay.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="armoury\ProcessRequest.cpp">
+    <ClCompile Include="armoury\OfflineInventory.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);</AdditionalIncludeDirectories>
     </ClCompile>
